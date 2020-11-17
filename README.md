@@ -3,9 +3,11 @@
 
 The cl-notebook project and forks of cl-notebook have been neglected for a few years, and this is the resurrection, with a new name and a new life. There are many new features planned for the near future. Some of the ideas are borrowed from other projects, but there are some surprises that are waiting to surface from the depths of the mind.
 
-The first priority is to chase down all of the reported issues from all of the forks and squash the bugs.
+The name claxiom is a portmanteu of clever and axiom. In looking for a unique name for the project, I started with the popular convention of starting a project name with CL, and it evolved from there. Hey, Ma! I made a word!
 
-This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previouis lives. Patience.
+The first priority is to chase down all of the reported bug-related issues from all of the forks and squash the bugs.
+
+This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previouis lives. Patience. I'm just getting started.
 
 > Tools, of course, can be the subtlest of traps.
 > One day I know I must smash the ~~emerald~~ Emacs.
