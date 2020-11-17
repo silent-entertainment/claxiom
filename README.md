@@ -5,7 +5,7 @@ The cl-notebook project and forks of cl-notebook have been neglected for a few y
 
 The first priority is to chase down all of the reported issues from all of the forks and squash the bugs.
 
-This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from cl-notebook. Patience.
+This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previouis lives. Patience.
 
 > Tools, of course, can be the subtlest of traps.
 > One day I know I must smash the ~~emerald~~ Emacs.
