@@ -29,9 +29,11 @@ Now, arrange it as a client-server application with the browser as the client, w
 
 The first priority is to chase down all of the reported bug-related issues from all of the forks, squash the bugs and make it stable and functionally correct.
 
-Next, we'll give the front end a slightly new face and implement one or more new cell types. I'm going to keep the latter under wraps for now, because you'll think I'm a lunatic and because I don't want to make any promises that I can't keep, but it's going to be a wild ride.
+Next, we'll give the front end a slightly new face and implement at least a couple of new cell types. I'm going to keep the latter under wraps for now, because you'll think I'm a lunatic and because I don't want to make any promises that I can't keep, but it's going to be a wild ride.
 
-Okay, I'm teasing! [Here's the scoop...](https://github.com/silent-entertainment/clidiom/blob/main/README.md)
+Okay, I'm teasing! [Here's the scoop...](https://github.com/silent-entertainment/clidiom/blob/main/README.md) 
+
+The second cell type to be added will be for a lispy XML DSL that is compiled from custom tags that are associated with custom styles in the client. In fact, there is probably such an animal available here, but I'll have to look at the available XML libraries and at XML features in the browser, because it has been quite some time since I have delved into it. The reasoning here is that writing the custom tags with the HTML generator would be more verbose than it needs to be, if I recall correctly, and XML tags make more sense. This feature ties into the ideas that are proposed in [`clidiom`]((https://github.com/silent-entertainment/clidiom/blob/main/README.md)), for which it would be *very* useful to see the AST that is generated from the prose and to tag the prose if the prose confuses the semantic parser, in addition to the compiler-generated lisp code, which of course could be handled by CodeMirror. Such a feature is also bound to have other uses, as well.
 
 This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previous incarnations. Patience. I'm just getting started.
 
