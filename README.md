@@ -19,7 +19,9 @@ It's like the WYSIWYG GUI designer, which might be great for a dedicated designe
 
 Granted, different conventions for different purposes can be useful for the expression of specific ideas. However, even if you're an expert in every language that **might** be ideal for a particular project, switching back and forth between multiple representations is like a tax. If you have a reasonably sized team with individual specialists in each syntax who can and will provide a clean specification that effectively communicates the necessary requirements then each individual might be more productive in using a specialized language, but it still will require more resources to glue it all together.
 
-Why use so much boilerplate and bubblegum when everything can be done with a single syntax, in Common Lisp? Then you only need to know the structure of an HTML document and the structure of a browser script. That's it! And that makes the problem much simpler. 
+Why use so much boilerplate and bubblegum when everything can be done with a single syntax, in Common Lisp? Then you only need to know the structure of an HTML document and the structure of a browser script. That's it! And that makes the problem much simpler.
+
+Now, arrange it as a client-server application with the browser as the client, which `cl-notebook` has done for us. Everything that can be done on the server can be written in that single language, and with parenscript you can write client code in lisp, too. If there are third-party javascript libraries that do what is needed then use them, of course. For smaller project-specific tasks, you can write it in javascript, if you choose. I've written a lot of javascript very recently. It gets annoying, and I wouldn't want to write an entire application with it.
 
 ## Priorities
 
