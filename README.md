@@ -3,7 +3,7 @@
 
 The cl-notebook project and forks of cl-notebook have been neglected for a couple of years, and issues have gone unresolved. This is the resurrection, with a new name, a new face and a new life. There are many new features planned for the near future. Some of the ideas are borrowed from other projects, but there are some surprises that are waiting to surface from the depths of the mind.
 
-The name claxiom is a portmanteau of clever and axiom. Okay, I made that up as an afterthought. But isn't managing clever axioms what coding is all about? In looking for a unique name for the project, I started with the popular convention of starting a common lisp project name with CL, and it evolved from there. *And, viola! Hey, Ma! I made a word!*
+The name claxiom is a portmanteau of clever and axiom. Okay, I made that up as an afterthought. But isn't managing clever axioms what coding is all about? In looking for a unique name for the project, I started with the popular convention of starting a common lisp project name with CL, and it evolved from there. *And, viola! Hey, Ma! I made a new word!*
 
 And now we present the `claxiom notebook`,  with which you can record your stream of thoughts and code as they flow, test those ideas and keep a running record of your progress, in a format that is easier on the eyes than plain text with __noisy__ syntax. The format also might make it handy for sharing your thoughts.
 
