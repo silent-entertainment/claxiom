@@ -23,7 +23,9 @@ This fork materialized on November 17, 2020, so at the moment most of the code, 
 
 - Install a Common Lisp (I suggest [`sbcl`](http://www.sbcl.org/platform-table.html))
 - Install [`quicklisp`](http://www.quicklisp.org/beta/)
-- Hop into a Lisp and do `(ql:quickload :cl-notebook)`, followed by `(cl-notebook:main)`
+- Hop into a Lisp and do `(ql:quickload :cl-notebook)`, followed by `(cl-notebook:main)
+
+NOTE: cl-notebook is no longer in the quicklisp repository. I saw something about the possibility that it was removed due to bugs that stemmed from changes to the API of a dependency. As a workaround, to use quicklisp refer to section 4.1 of the asdf manual.`
 
 ### Binary
 
