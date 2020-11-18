@@ -35,7 +35,7 @@ This fork materialized on November 17, 2020, so at the moment most of the code, 
 > *with apologies to Neil Gaiman*
 
 ## This is now a pre-beta.
-***Use it at your own risk, and expect occasional minor explosions.***
+***Use it at your own risk and expect occasional minor explosions.***
 
 ## Usage
 
