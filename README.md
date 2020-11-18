@@ -19,7 +19,7 @@ Hey, markdown is what it is, and it has its usefulness. However, in Jupyter Note
 
 The first priority is to chase down all of the reported bug-related issues from all of the forks and squash the bugs.
 
-This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previous lives. Patience. I'm just getting started.
+This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previous incarnations. Patience. I'm just getting started.
 
 > Tools, of course, can be the subtlest of traps.
 > One day I know I must smash the ~~emerald~~ Emacs.
