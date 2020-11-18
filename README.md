@@ -9,7 +9,7 @@ And now we present the `claxiom notebook`,  with which you can record your strea
 
 ## Reasoning
 
-While looking for Common  IDE, I came across Jupyter Notebook. I was impressed, and it gave me some ideas for a current project. However, browsing the codebase gave me flashbacks of all of the reasons that I didn't like Python *at all*. Besides, I wanted to work in Common Lisp, so naturally I looked for similar Common Lisp projects. 
+While looking for a Common Lisp IDE, I came across Jupyter Notebook. I was impressed, and it gave me some ideas for a current project. However, browsing the codebase gave me flashbacks of all of the reasons that I didn't like Python *at all*. Besides, I wanted to work in Common Lisp, so naturally I looked for similar Common Lisp projects. 
 
 I found a couple of related projects, but cl-notebook stood apart from the others. The codebase is very attractive and nicely documented where it needs to be, but the one feature that hooked me was the availability of lispy html and parenscript **in the browser**. I had worked with cl-who and parenscript in the past, so I already had some ideas about such a desirable feature, before I had seen the implementation of it in the browser in cl-notebook. 
 
