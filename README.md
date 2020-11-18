@@ -14,8 +14,8 @@ This fork materialized on November 17, 2020, so at the moment most of the code, 
 >
 > *with apologies to Neil Gaiman*
 
-# This is now a pre-beta
-#### Use it at your own risk, and expect occasional, minor explosions
+# This is now a pre-beta.
+#### Use it at your own risk, and expect occasional minor explosions.
 
 ## Usage
 
@@ -25,7 +25,7 @@ This fork materialized on November 17, 2020, so at the moment most of the code, 
 - Install [`quicklisp`](http://www.quicklisp.org/beta/)
 - Hop into a Lisp and do `(ql:quickload :cl-notebook)`, followed by `(cl-notebook:main)
 
-NOTE: cl-notebook is no longer in the quicklisp repository. I saw something about the possibility that it was removed due to bugs that stemmed from changes to the API of a dependency. As a workaround, to use quicklisp with a local copy refer to section 4.1 of the asdf manual.`In a future update, the system name and package name will be changed to claxiom.
+NOTE: cl-notebook is no longer in the quicklisp repository. I saw something about the possibility that it was removed due to bugs that stemmed from changes to the API of a dependency. As a workaround, to use quicklisp with a local copy refer to section 4.1 of the [asdf manual](https://common-lisp.net/project/asdf/asdf.html). In a future update, the system name, package name and related filenames will be changed to claxiom.
 
 ### Binary
 
@@ -67,7 +67,7 @@ A quick-ish, and now slightly out-of-date video demo is available [here](https:/
    That will create a binary with the appropriate name that you can directly run on any machine of your OS and processor architecture.
 - Grab your binary at `roswell/cl-notebook`.
 
-This should work under the Linux, OSX and Windows.
+This should work under Linux, OSX and Windows.
 
 #### With [`buildapp`](https://www.xach.com/lisp/buildapp/)
 
