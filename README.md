@@ -21,7 +21,7 @@ Granted, different conventions for different purposes can be useful for the expr
 
 Why use so much boilerplate and bubblegum when everything can be done with a single syntax, in Common Lisp? Then you only need to know the structure of an HTML document and the structure of a browser script. That's it! And that makes the problem much simpler.
 
-Now, arrange it as a client-server application with the browser as the client, which `cl-notebook` has done for us. Everything that can be done on the server without the latency being a problem can be written in that single language, and with parenscript you can write client code in lisp, too. If there are third-party javascript libraries that do what is needed then use them, of course. For smaller project-specific tasks, you can write it in javascript, if you choose. I've written a lot of javascript very recently. It gets annoying, and I wouldn't want to write an entire application with it.
+Now, arrange it as a client-server application with the browser as the client, which `cl-notebook` has done for us. Everything that can be done on the server without the latency being a problem can be written in that single language, and with parenscript you can write client code in lisp, too. If there are third-party javascript libraries that do what is needed then use them, of course. For smaller project-specific tasks, you can write it in javascript, if you choose. I've written a lot of javascript very recently. It gets annoying, and I wouldn't want to write an entire application with it. With the server running, now you can take a break and go and sit on the couch with a cup of coffee and your tablet and proofread your thoughts. 
 
 ## Priorities
 
