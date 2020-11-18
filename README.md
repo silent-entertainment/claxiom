@@ -27,7 +27,7 @@ Now, arrange it as a client-server application with the browser as the client, w
 
 ## Priorities
 
-The first priority is to chase down all of the reported bug-related issues from all of the forks and squash the bugs.
+The first priority is to chase down all of the reported bug-related issues from all of the forks, squash the bugs and make it stable and functionally correct.
 
 This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previous incarnations. Patience. I'm just getting started.
 
