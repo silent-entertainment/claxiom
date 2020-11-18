@@ -35,7 +35,7 @@ _At the moment, we've only got binaries for 64-bit Linux. Submissions for other 
 
 ### With [`roswell`](https://github.com/roswell/roswell) and [`qlot`](https://github.com/fukamachi/qlot)
 
-_These help you manage Common Lisp distributions. They are usefull not only for running claxiom, but for any other CL project, so consider them regardless of whether you want this project._
+These help you manage Common Lisp distributions. They are usefull not only for running claxiom, but for any other CL project, so consider them regardless of whether you want this project.
 
 - Install [`roswell`](https://github.com/roswell/roswell)
 - Install [`qlot`](https://github.com/fukamachi/qlot)
