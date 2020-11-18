@@ -7,7 +7,7 @@ The decision to duplicate the cl-notebook repository, instead of forking it, was
 
 The name claxiom is a portmanteau of clever and axiom. Okay, I made that up as an afterthought. But isn't managing clever axioms what coding is all about? In looking for a unique name for the project, I started with the popular convention of starting a common lisp project name with CL, and it evolved from there. *And, viola! Hey, Ma! I made a new word!*
 
-And now we present the `claxiom notebook`,  with which you can record your stream of thoughts and code interactively with the flow, test those ideas and keep a running record of your progress, in a format that is easier on the eyes than plain text with all that __noisy__ syntax. The format also might make it handy for sharing your thoughts.
+And now we present the `claxiom notebook`,  with which you can record your stream of thoughts, code interactively with the flow, test those ideas and keep a running record of your progress, in a format that is easier on the eyes than plain text with all that __noisy__ syntax. The format also might make it quite convenient for sharing your thoughts.
 
 ## Reasoning
 
