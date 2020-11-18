@@ -1,9 +1,21 @@
 # claxiom
-##### A notebook-style in-browser editor for Common Lisp.
+*A notebook-style in-browser editor for Common Lisp.*
 
 The cl-notebook project and forks of cl-notebook have been neglected for a few years. This is the resurrection, with a new name and a new life. There are many new features planned for the near future. Some of the ideas are borrowed from other projects, but there are some surprises that are waiting to surface from the depths of the mind.
 
-The name claxiom is a portmanteau of clever and axiom. Okay, I made that up as an afterthought. But isn't clever axioms what coding is all about? In looking for a unique name for the project, I started with the popular convention of starting a common lisp project name with CL, and it evolved from there. *Hey, Ma! I made a word!*
+The name claxiom is a portmanteau of clever and axiom. Okay, I made that up as an afterthought. But isn't managing clever axioms what coding is all about? In looking for a unique name for the project, I started with the popular convention of starting a common lisp project name with CL, and it evolved from there. *Hey, Ma! I made a word!*
+
+And now we present the claxiom notebook,  with which you can record your stream of thoughts and code as they flow, test those thoughts and keep a running record of your progress, in a format that is easier on the eyes than plain text with ugly dyntax, which might make it handy for sharing your thoughts.
+
+## Reasoning
+
+In looking for an IDE, I came across Jupyter Notebook. I was impressed, and it gave me some ideas for a current project. Browsing the codebase gave me flashbacks of all of the reasons that I didn't like Python *at all*. Besides, I wanted to work in Common Lisp, so I looked for similar Common Lisp projects. 
+
+I found a couple of related projects, but cl-notebook stood apart from the others. The codebase is very attractive and nicely documented where it needs to be, but the one feature that hooked me was the availability of lispy html and parenscript **in the browser**. I had worked with cl-who and parenscript in the past, I already had some ideas about such a desirable feature before I had seen the implementation of it in the browser in cl-notebook. 
+
+Hey, markdown is what it is, and it has its usefulness. However, in Jupyter Notebook, for example, if you want to hack the Notebook software, to add a nifty feature or to do something fancy, you're looking at dealing with different syntax for markdown, HTML, javascript, Python and possible other DSLs, such as templates. Switching back and forth from one syntax to the other requires too much energy that would be better used on the actual priorities. Why do that when everything can be done with a single syntax, in Common Lisp? Then you only need to know the structure of an HTML document and the structure of a browser script. That's it! And that makes the problem much simpler. 
+
+## Priorities
 
 The first priority is to chase down all of the reported bug-related issues from all of the forks and squash the bugs.
 
