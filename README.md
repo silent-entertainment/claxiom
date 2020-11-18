@@ -29,6 +29,8 @@ Now, arrange it as a client-server application with the browser as the client, w
 
 The first priority is to chase down all of the reported bug-related issues from all of the forks, squash the bugs and make it stable and functionally correct.
 
+Next, we'll give the front end a slightly new face and implement one or more new cell types. I'm going to keep the latter under wraps for now, because you'll think I'm a lunatic and because I don't want to make any promises that I can't keep, but it's going to be a wild ride. 
+
 This fork materialized on November 17, 2020, so at the moment most of the code, documentation and presentation is from previous incarnations. Patience. I'm just getting started.
 
 > Tools, of course, can be the subtlest of traps.
