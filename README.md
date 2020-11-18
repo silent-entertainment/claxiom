@@ -25,7 +25,7 @@ This fork materialized on November 17, 2020, so at the moment most of the code, 
 - Install [`quicklisp`](http://www.quicklisp.org/beta/)
 - Hop into a Lisp and do `(ql:quickload :cl-notebook)`, followed by `(cl-notebook:main)
 
-NOTE: cl-notebook is no longer in the quicklisp repository. I saw something about the possibility that it was removed due to bugs that stemmed from changes to the API of a dependency. As a workaround, to use quicklisp with a local copy refer to section 4.1 of the asdf manual.`
+NOTE: cl-notebook is no longer in the quicklisp repository. I saw something about the possibility that it was removed due to bugs that stemmed from changes to the API of a dependency. As a workaround, to use quicklisp with a local copy refer to section 4.1 of the asdf manual.`In a future update, the system name and package name will be changed to claxiom.
 
 ### Binary
 
@@ -35,7 +35,7 @@ _At the moment, we've only got binaries for 64-bit Linux. Submissions for other 
 
 ### With [`roswell`](https://github.com/roswell/roswell) and [`qlot`](https://github.com/fukamachi/qlot)
 
-_These help you manage Common Lisp distributions. They are usefull not only for running cl-notebook, but for any other CL project, so consider them regardless of whether you want this project._
+_These help you manage Common Lisp distributions. They are usefull not only for running claxiom, but for any other CL project, so consider them regardless of whether you want this project._
 
 - Install [`roswell`](https://github.com/roswell/roswell)
 - Install [`qlot`](https://github.com/fukamachi/qlot)
