@@ -1,7 +1,7 @@
 ((6600 84304 238050000) :INSERT (0 :NOTEBOOK-NAME "_notebook"))
 ((6600 84304 238165000) :INSERT
  (1 :NOTEBOOK-PACKAGE "(defpackage \"_notebook\"
-  (:use :cl :fact-base :cl-notebook))"))
+  (:use :cl :fact-base :claxiom))"))
 ((6600 84434 333581000) :INSERT (2 :CELL NIL))
 ((6600 84434 333598000) :INSERT (2 :CELL-TYPE :CODE))
 ((6600 84434 333602000) :INSERT (2 :CELL-LANGUAGE :COMMON-LISP))
@@ -271,7 +271,7 @@
 (:p \"This is a \" (:code \"markup\") \" cell. You can edit its code by clicking on it.\")
 (:p \"Below is a \" (:code \"code\") \" cell. It currently evaluates to the integer \" (:code \"5\"))")
   (2 :CONTENTS
-   "(:p \"Welcome to \" (:a :href \"https://github.com/inaimathi/cl-notebook\" \"CL Notebook\") \". The Notebook-style editor for Common Lisp.\")
+   "(:p \"Welcome to \" (:a :href \"https://github.com/strangeri/claxiom\" \"CL Notebook\") \". The Notebook-style editor for Common Lisp.\")
 (:p \"This is a \" (:code \"markup\") \" cell. You can edit its code by clicking on it.\")
 (:p \"Below is a \" (:code \"code\") \" cell. It currently evaluates to the integer \" (:code \"5\"))")))
 ((6600 84835 876549000) :CHANGE
@@ -286,7 +286,7 @@
      (:VALUES
       ((:TYPE . "string")
        (:VALUE
-        . "<p>Welcome to <a href='https://github.com/inaimathi/cl-notebook'>CL Notebook</a>. The Notebook-style editor for Common Lisp.</p><p>This is a <code>markup</code> cell. You can edit its code by clicking on it.</p><p>Below is a <code>code</code> cell. It currently evaluates to the integer <code>5</code></p>"))))))))
+        . "<p>Welcome to <a href='https://github.com/strangeri/claxiom'>CL Notebook</a>. The Notebook-style editor for Common Lisp.</p><p>This is a <code>markup</code> cell. You can edit its code by clicking on it.</p><p>Below is a <code>code</code> cell. It currently evaluates to the integer <code>5</code></p>"))))))))
 ((6600 84835 876577000) :DELETE (2 :STALE T))
 ((6600 84865 953606000) :CHANGE
  ((5 :CONTENTS "") (5 :CONTENTS "(values :multiple :value :cells)")))
@@ -324,7 +324,7 @@
    (((:STDOUT . "") (:WARNINGS)
      (:VALUES
       ((:TYPE . ERROR)
-       (:VALUE (CL-NOTEBOOK::CONDITION-TYPE . "END-OF-FILE") (:FORM . "NIL")
+       (:VALUE (CLAXIOM::CONDITION-TYPE . "END-OF-FILE") (:FORM . "NIL")
         (:STREAM . "#<SB-IMPL::STRING-INPUT-STREAM {1008768013}>")))))))))
 ((6600 84898 792216000) :DELETE (7 :STALE T))
 ((6600 84908 275498000) :INSERT (8 :CELL NIL))
@@ -1853,13 +1853,13 @@ function tickbang() {
   (10 :RESULT
    (((:STDOUT . "")
      (:WARNINGS
-      ((CL-NOTEBOOK::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
+      ((CLAXIOM::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
        (:ERROR-MESSAGE . "undefined function: TICK!"))
-      ((CL-NOTEBOOK::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
+      ((CLAXIOM::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
        (:ERROR-MESSAGE . "undefined function: SET-INTERVAL")))
      (:VALUES
       ((:TYPE . ERROR)
-       (:VALUE (CL-NOTEBOOK::CONDITION-TYPE . "UNDEFINED-FUNCTION")
+       (:VALUE (CLAXIOM::CONDITION-TYPE . "UNDEFINED-FUNCTION")
         (:FORM
          . "(DEFVAR TICK-INTERVAL (SET-INTERVAL (LAMBDA () (TICK!)) 40))")
         (:NAME . "SET-INTERVAL")))))))))
@@ -2131,13 +2131,13 @@ function tickbang() {
  ((10 :RESULT
    (((:STDOUT . "")
      (:WARNINGS
-      ((CL-NOTEBOOK::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
+      ((CLAXIOM::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
        (:ERROR-MESSAGE . "undefined function: TICK!"))
-      ((CL-NOTEBOOK::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
+      ((CLAXIOM::CONDITION-TYPE . "SIMPLE-STYLE-WARNING")
        (:ERROR-MESSAGE . "undefined function: SET-INTERVAL")))
      (:VALUES
       ((:TYPE . ERROR)
-       (:VALUE (CL-NOTEBOOK::CONDITION-TYPE . "UNDEFINED-FUNCTION")
+       (:VALUE (CLAXIOM::CONDITION-TYPE . "UNDEFINED-FUNCTION")
         (:FORM
          . "(DEFVAR TICK-INTERVAL (SET-INTERVAL (LAMBDA () (TICK!)) 40))")
         (:NAME . "SET-INTERVAL")))))))
@@ -2938,7 +2938,7 @@ function tickbang() {
    (((:STDOUT . "") (:WARNINGS)
      (:VALUES
       ((:TYPE . ERROR)
-       (:VALUE (CL-NOTEBOOK::CONDITION-TYPE . "END-OF-FILE")
+       (:VALUE (CLAXIOM::CONDITION-TYPE . "END-OF-FILE")
         (:STREAM . "#<SB-IMPL::STRING-INPUT-STREAM {100A62FF03}>")))))))))
 ((6601 63218 119922000) :DELETE (11 :STALE T))
 ((6601 63221 666853000) :CHANGE
@@ -2951,7 +2951,7 @@ function tickbang() {
    (((:STDOUT . "") (:WARNINGS)
      (:VALUES
       ((:TYPE . ERROR)
-       (:VALUE (CL-NOTEBOOK::CONDITION-TYPE . "END-OF-FILE")
+       (:VALUE (CLAXIOM::CONDITION-TYPE . "END-OF-FILE")
         (:STREAM . "#<SB-IMPL::STRING-INPUT-STREAM {100A62FF03}>")))))))
   (11 :RESULT
    (((:STDOUT . "") (:WARNINGS)
@@ -2965,7 +2965,7 @@ function tickbang() {
    "(:p \"Below, you can see the \\\"Export As\\\" menu. By default, you can use it to export this book as a Lisp or HTML file.\")")
   (11 :CONTENTS
    "(:p \"Below, you can see the \\\"Export As\\\" menu. By default, you can use it to export this book as a Lisp or HTML file.\")
-(:p \"Be sure to check out other config notebooks in \" (:code \"~/.cl-notebook/books\") \" to see more of what you can do here.\")")))
+(:p \"Be sure to check out other config notebooks in \" (:code \"~/.claxiom/books\") \" to see more of what you can do here.\")")))
 ((6601 63321 309174000) :CHANGE
  ((11 :RESULT
    (((:STDOUT . "") (:WARNINGS)
@@ -2978,7 +2978,7 @@ function tickbang() {
      (:VALUES
       ((:TYPE . "string")
        (:VALUE
-        . "<p>Below, you can see the \"Export As\" menu. By default, you can use it to export this book as a Lisp or HTML file.</p><p>Be sure to check out other config notebooks in <code>~/.cl-notebook/books</code> to see more of what you can do here.</p>"))))))))((6601 67244 993167000) :CHANGE
+        . "<p>Below, you can see the \"Export As\" menu. By default, you can use it to export this book as a Lisp or HTML file.</p><p>Be sure to check out other config notebooks in <code>~/.claxiom/books</code> to see more of what you can do here.</p>"))))))))((6601 67244 993167000) :CHANGE
  ((7 :RESULT
    (((:STDOUT . "") (:WARNINGS)
      (:VALUES
@@ -3030,7 +3030,7 @@ function tickbang() {
  ((12 :CONTENTS
    "(bar-graph '((\"one\" . 32) (\"two\" . 78) (\"three\" . 12)) :title \"Test Bar Graph\")")
   (12 :CONTENTS
-   "(:p \"Basic bar charts, implemented in the \" (:a :href \"#book=%2Fhome%2Finaimathi%2F.cl-notebook%2Fbooks%2Fcharts\" (:code \"charts\")) \" book.\")
+   "(:p \"Basic bar charts, implemented in the \" (:a :href \"#book=%2Fhome%2Fstrangeri%2F.claxiom%2Fbooks%2Fcharts\" (:code \"charts\")) \" book.\")
 
 (bar-graph '((\"one\" . 32) (\"two\" . 78) (\"three\" . 12)) :title \"Test Bar Graph\")")))
 ((6602 12908 761492000) :CHANGE
@@ -3045,15 +3045,15 @@ function tickbang() {
      (:VALUES
       ((:TYPE . "string")
        (:VALUE
-        . "<p>Basic bar charts, implemented in the <a href='#book=%2Fhome%2Finaimathi%2F.cl-notebook%2Fbooks%2Fcharts'><code>charts</code></a> book.</p><div class='chart'><div class='title'>Test Bar Graph</div><div class='bar-graph'><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 59%; '></div><div class='spacer' style='height: 41%; '></div><div class='label' style='white-space: nowrap; '>one (32)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 0%; '></div><div class='spacer' style='height: 100%; '></div><div class='label' style='white-space: nowrap; '>two (78)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 85%; '></div><div class='spacer' style='height: 15%; '></div><div class='label' style='white-space: nowrap; '>three (12)</div></div></div></div>"))))))))
+        . "<p>Basic bar charts, implemented in the <a href='#book=%2Fhome%2Fstrangeri%2F.claxiom%2Fbooks%2Fcharts'><code>charts</code></a> book.</p><div class='chart'><div class='title'>Test Bar Graph</div><div class='bar-graph'><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 59%; '></div><div class='spacer' style='height: 41%; '></div><div class='label' style='white-space: nowrap; '>one (32)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 0%; '></div><div class='spacer' style='height: 100%; '></div><div class='label' style='white-space: nowrap; '>two (78)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 85%; '></div><div class='spacer' style='height: 15%; '></div><div class='label' style='white-space: nowrap; '>three (12)</div></div></div></div>"))))))))
 ((6602 12908 761513000) :DELETE (12 :STALE T))
 ((6602 12918 847811000) :CHANGE
  ((12 :CONTENTS
-   "(:p \"Basic bar charts, implemented in the \" (:a :href \"#book=%2Fhome%2Finaimathi%2F.cl-notebook%2Fbooks%2Fcharts\" (:code \"charts\")) \" book.\")
+   "(:p \"Basic bar charts, implemented in the \" (:a :href \"#book=%2Fhome%2Fstrangeri%2F.claxiom%2Fbooks%2Fcharts\" (:code \"charts\")) \" book.\")
 
 (bar-graph '((\"one\" . 32) (\"two\" . 78) (\"three\" . 12)) :title \"Test Bar Graph\")")
   (12 :CONTENTS
-   "(:p \"Basic bar charts, implemented in the \" (:a :href \"#book=%2Fhome%2Finaimathi%2F.cl-notebook%2Fbooks%2Fcharts\" :target \"_blank\" (:code \"charts\")) \" book.\")
+   "(:p \"Basic bar charts, implemented in the \" (:a :href \"#book=%2Fhome%2Fstrangeri%2F.claxiom%2Fbooks%2Fcharts\" :target \"_blank\" (:code \"charts\")) \" book.\")
 
 (bar-graph '((\"one\" . 32) (\"two\" . 78) (\"three\" . 12)) :title \"Test Bar Graph\")")))
 ((6602 12918 862598000) :CHANGE
@@ -3062,11 +3062,11 @@ function tickbang() {
      (:VALUES
       ((:TYPE . "string")
        (:VALUE
-        . "<p>Basic bar charts, implemented in the <a href='#book=%2Fhome%2Finaimathi%2F.cl-notebook%2Fbooks%2Fcharts'><code>charts</code></a> book.</p><div class='chart'><div class='title'>Test Bar Graph</div><div class='bar-graph'><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 59%; '></div><div class='spacer' style='height: 41%; '></div><div class='label' style='white-space: nowrap; '>one (32)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 0%; '></div><div class='spacer' style='height: 100%; '></div><div class='label' style='white-space: nowrap; '>two (78)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 85%; '></div><div class='spacer' style='height: 15%; '></div><div class='label' style='white-space: nowrap; '>three (12)</div></div></div></div>"))))))
+        . "<p>Basic bar charts, implemented in the <a href='#book=%2Fhome%2Fstrangeri%2F.claxiom%2Fbooks%2Fcharts'><code>charts</code></a> book.</p><div class='chart'><div class='title'>Test Bar Graph</div><div class='bar-graph'><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 59%; '></div><div class='spacer' style='height: 41%; '></div><div class='label' style='white-space: nowrap; '>one (32)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 0%; '></div><div class='spacer' style='height: 100%; '></div><div class='label' style='white-space: nowrap; '>two (78)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 85%; '></div><div class='spacer' style='height: 15%; '></div><div class='label' style='white-space: nowrap; '>three (12)</div></div></div></div>"))))))
   (12 :RESULT
    (((:STDOUT . "") (:WARNINGS)
      (:VALUES
       ((:TYPE . "string")
        (:VALUE
-        . "<p>Basic bar charts, implemented in the <a href='#book=%2Fhome%2Finaimathi%2F.cl-notebook%2Fbooks%2Fcharts' target='_blank'><code>charts</code></a> book.</p><div class='chart'><div class='title'>Test Bar Graph</div><div class='bar-graph'><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 59%; '></div><div class='spacer' style='height: 41%; '></div><div class='label' style='white-space: nowrap; '>one (32)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 0%; '></div><div class='spacer' style='height: 100%; '></div><div class='label' style='white-space: nowrap; '>two (78)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 85%; '></div><div class='spacer' style='height: 15%; '></div><div class='label' style='white-space: nowrap; '>three (12)</div></div></div></div>"))))))))
+        . "<p>Basic bar charts, implemented in the <a href='#book=%2Fhome%2Fstrangeri%2F.claxiom%2Fbooks%2Fcharts' target='_blank'><code>charts</code></a> book.</p><div class='chart'><div class='title'>Test Bar Graph</div><div class='bar-graph'><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 59%; '></div><div class='spacer' style='height: 41%; '></div><div class='label' style='white-space: nowrap; '>one (32)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 0%; '></div><div class='spacer' style='height: 100%; '></div><div class='label' style='white-space: nowrap; '>two (78)</div></div><div class='bar' style='width: 29.333334%; margin: 1.6666666%; '><div class='hider' style='height: 85%; '></div><div class='spacer' style='height: 15%; '></div><div class='label' style='white-space: nowrap; '>three (12)</div></div></div></div>"))))))))
 ((6602 12918 862627000) :DELETE (12 :STALE T))

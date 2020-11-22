@@ -1,5 +1,5 @@
 ;;;; package.lisp
-(defpackage #:cl-notebook
+(defpackage #:claxiom
   (:use #:cl #:house #:parenscript #:cl-who #:fact-base)
   (:import-from #:cl-css #:inline-css)
   (:shadowing-import-from #:cl-css #:%)
@@ -16,7 +16,7 @@
   (:shadowing-import-from #:fact-base #:lookup)
   (:export :bar-graph :draw-bar-graph :main :str :htm :who-ps-html :new :create :@ :chain :define-css))
 
-(in-package #:cl-notebook)
+(in-package #:claxiom)
 
 (defvar *storage* nil)
 (defvar *books* nil)

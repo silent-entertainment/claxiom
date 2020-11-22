@@ -1,4 +1,4 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 
 (define-handler (js/notebook-selector.js :content-type "application/javascript") ()
   (ps
@@ -97,7 +97,7 @@
       (dom-set elem (filesystem-template listing)))
 
     (defun filesystem! (elem directory &key (filter? t))
-      (get/json "/cl-notebook/system/ls" (create :dir directory)
+      (get/json "/claxiom/system/ls" (create :dir directory)
                 (lambda (dat)
                   (setf *current-fs-listing*
                         (create :directories (or (@ dat :directories) (list))
@@ -112,7 +112,7 @@
 
     (defun get-loaded-books! (elem current-notebook-id)
       (get/json
-       "/cl-notebook/loaded-books" (create)
+       "/claxiom/loaded-books" (create)
        (lambda (dat)
          (dom-set
           elem
@@ -129,7 +129,7 @@
          (by-selector elem ".loaded-books-list")
          (@ *notebook* id))
         (chain (by-selector elem ".filesystem-input") (focus))
-        (get/json "/cl-notebook/system/home-path" (create)
+        (get/json "/claxiom/system/home-path" (create)
                   (lambda (initial-dir)
                     (setf (@ (by-selector elem ".filesystem-input") value) initial-dir)
                     (filesystem! (by-selector elem ".filesystem-view") initial-dir)))))))

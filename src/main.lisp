@@ -1,8 +1,8 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 ; System initialization and related functions
 
 (defun read-statics ()
-  "Used to read the cl-notebook static files into memory.
+  "Used to read the claxiom static files into memory.
 Only useful during the build process, where its called with an --eval flag."
   (setf *static-files* (make-hash-table :test #'equal))
   (flet ((read-file (filename)
@@ -10,7 +10,7 @@ Only useful during the build process, where its called with an --eval flag."
 	     (let ((data (make-array (list (file-length stream)))))
 	       (read-sequence data stream)
 	       data))))
-    (let ((root (asdf:system-source-directory :cl-notebook)))
+    (let ((root (asdf:system-source-directory :claxiom)))
       (cl-fad:walk-directory
        (sys-dir (merge-pathnames "static" root))
        (lambda (filename)
@@ -37,7 +37,7 @@ Only useful during the build process, where its called with an --eval flag."
       (let ((p (or (get-param '(:p :port) params) port))
 	    (host (if (or (get-param '(:o :open :public) params) public?) usocket:*wildcard-host* #(127 0 0 1))))
 	(format t "Initializing storage directories...~%")
-	(setf *storage* (sys-dir (merge-pathnames ".cl-notebook" (user-homedir-pathname)))
+	(setf *storage* (sys-dir (merge-pathnames ".claxiom" (user-homedir-pathname)))
 	      *books* (sys-dir (merge-pathnames "books" *storage*))
               *ql* (merge-pathnames "quicklisp" *storage*))
 
@@ -59,7 +59,7 @@ Only useful during the build process, where its called with an --eval flag."
               (format t "   Loading quicklisp from ~s...~%" *ql*)
               (load (merge-pathnames "setup.lisp" *ql*))))
 
-	(in-package :cl-notebook)
+	(in-package :claxiom)
 	(format t "Loading config books...~%")
 	(dolist (book (cl-fad:list-directory *books*))
 	  (format t "   Loading ~a...~%" book)
@@ -84,6 +84,6 @@ Only useful during the build process, where its called with an --eval flag."
 
 (defun main-dev ()
   (house::debug!)
-  (setf *static* (sys-dir (merge-pathnames "static" (asdf:system-source-directory :cl-notebook))))
+  (setf *static* (sys-dir (merge-pathnames "static" (asdf:system-source-directory :claxiom))))
   (bt:make-thread
    (lambda () (main))))

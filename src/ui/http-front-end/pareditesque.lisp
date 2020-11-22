@@ -1,4 +1,4 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 
 (define-handler (js/pareditesque.js :content-type "application/javascript") ()
   (ps

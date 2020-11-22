@@ -1,4 +1,4 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 
 (defparameter *base-js*
   (ps

@@ -1,4 +1,4 @@
-(in-package #:cl-notebook)
+(in-package #:claxiom)
 
 (defparameter +mod-keys+
   `((shift? (@ event shift-key)) (alt? (@ event alt-key)) (ctrl? (@ event ctrl-key)) (meta? (@ event meta-key))))

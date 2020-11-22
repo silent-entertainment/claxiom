@@ -1,10 +1,10 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 
 (define-handler (/) ()
   (with-html-output-to-string (s nil :prologue t :indent t)
     (:html
      (:head
-      (:title "cl-notebook")
+      (:title "claxiom")
 
       (:link :rel "stylesheet" :href "/css/notebook.css")
       (:link :rel "stylesheet" :href "/static/css/genericons.css")
@@ -16,7 +16,7 @@
        :type "text/javascript"
        (str
         (format
-         nil "var CLNOTEBOOK = ~a"
+         nil "var CLAXIOM = ~a"
          (json:encode-json-to-string
           (hash
            :formats
@@ -52,7 +52,7 @@
       (:script :type "text/javascript" :src "/static/js/addons/runmode/runmode.js"))
 
      (:body
-      (:span :id "cl-notebook-front-end-addons"
+      (:span :id "claxiom-front-end-addons"
              (:link :rel "stylesheet" :href "/css/notebook-addons.css"))
       (:div :id "macro-expansion" (:textarea :language "commonlisp"))
       (:div :id "notebook")
@@ -74,7 +74,7 @@
 
 (define-handler (js/core.js :content-type "application/javascript") ()
   (ps
-    ;; cl-notebook specific utility
+    ;; claxiom specific utility
     (defun by-cell-id (cell-id &rest children)
       (by-selector
        (+ "#cell-" cell-id
@@ -114,16 +114,16 @@
 	  (post/json uri args on-success on-fail)
 	  (fork-book (lambda (res)
 		       (surgical! res)
-		       (setf document.title (+ (@ res book-name) " - cl-notebook"))
+		       (setf document.title (+ (@ res book-name) " - claxiom"))
 		       (setf (@ args :book) (@ res id))
 		       (dom-replace (by-selector ".book-title") (notebook-title-template (@ res book-name)))
 		       (post/json uri args on-success on-fail)))))
 
-    ;; cl-notebook specific events
+    ;; claxiom specific events
     (defun reload-addon-resources! (resource-type resource-name)
       (console.log "RELOADING" resource-type resource-name "(TODO - be surgical about this)")
       (dom-set
-       (by-selector "#cl-notebook-front-end-addons")
+       (by-selector "#claxiom-front-end-addons")
        (who-ps-html
         (:link :rel "stylesheet" :href (+ "/css/notebook-addons.css?now=" (now!))))))
 
@@ -144,7 +144,7 @@
                  (hide-editor id))))
            (notebook-cells *notebook*)))
 
-    ;; cl-notebook specific DOM manipulation
+    ;; claxiom specific DOM manipulation
     (defun display-book (book-name)
       (when book-name
 	(set-page-hash (create :book book-name))
@@ -443,7 +443,7 @@
 	 (by-selector "#notebook")
 	 (notebook-template *notebook*))
 	(surgical! raw)
-	(setf document.title (+ (notebook-name *notebook*) " - cl-notebook"))
+	(setf document.title (+ (notebook-name *notebook*) " - claxiom"))
 	(nativesortable (by-selector "ul.cells"))
 	(map (lambda (cell)
 	       (with-slots (id cell-type) cell
@@ -458,7 +458,7 @@
 
     (defun notebook-events ()
       (event-source
-       "/cl-notebook/source"
+       "/claxiom/source"
        (create
 	'new-cell
 	(lambda (res)
@@ -594,7 +594,7 @@
 		  (let* ((cur (chain mirror (get-cursor)))
 			 (tok (chain mirror (get-token-at cur))))
 		    (when (> (length (@ tok string)) 2)
-		      (get "/cl-notebook/system/complete" (create :partial (@ tok string) :package :cl-notebook)
+		      (get "/claxiom/system/complete" (create :partial (@ tok string) :package :claxiom)
 			   (lambda (res)
 			     (callback
 			      (create :list (or (string->obj res) (new (-array)))
@@ -645,7 +645,7 @@
 
        (unless (get-page-hash)
          (get/json
-          "/cl-notebook/loaded-books" (create)
+          "/claxiom/loaded-books" (create)
           (lambda (dat)
             (set-page-hash (create :book (@ dat 0 path))))))
        (setup-macro-expansion-mirror!)

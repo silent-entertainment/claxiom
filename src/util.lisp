@@ -1,4 +1,4 @@
-(in-package #:cl-notebook)
+(in-package #:claxiom)
 
 ;;;;; Basic HTML stuff
 (defmacro html-to-str (&rest forms)
