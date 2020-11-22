@@ -3,7 +3,7 @@
 
 The [`cl-notebook`](https://github.com/inaimathi/cl-notebook) project and forks of `cl-notebook` have been neglected for a couple of years, and issues have gone unresolved. This is the resurrection, with a new name, a new face and a new life. There are many new features planned for the near future. Some of the ideas are borrowed from other projects, but there are some surprises that are waiting to surface from the depths of the mind.
 
-The decision to duplicate the `cl-notebook` repository, instead of forking it, was based on a few factors. My plan to diverge from the original project was the primary factor. Though the face of `cl-notebook` is very nice, I envision some changes that might not mesh with the original project or its forks. I also have some ideas about where I'd like to go with it that might be too extreme for the existing base and which essentially make it into a very different application. As a github novice, I was and still am completely unfamiliar with the customs of the community or proper etiquette, and I didn't want to be a nuisance to that existing base with my activities.
+The decision to duplicate the `cl-notebook repository`, instead of forking it, was based on a few factors. My plan to diverge from the original project was the primary factor. Though the face of `cl-notebook` is very nice, I envision some changes that might not mesh with the original project or its forks. I also have some ideas about where I'd like to go with it that might be too extreme for the existing base and which essentially make it into a very different application. As a github novice, I was and still am completely unfamiliar with the customs of the community or proper etiquette, and I didn't want to be a nuisance to that existing base with my activities.
 
 The name 'claxiom' is a portmanteau of clever and axiom. Okay, I made that up as an afterthought. But isn't managing clever axioms what coding is all about? After all, we're just monkeys in disguise. In looking for a unique name for the project, I started with the popular convention of starting a common lisp project name with CL, and it evolved from there. *And, viola! Hey, Ma! I made a new word!*
 
@@ -17,7 +17,7 @@ I found a couple of related projects, but `cl-notebook` stood apart from the oth
 
 Hey, markdown is what it is, and it has its usefulness. However, in `Jupyter Notebook`, for example, if you want to hack the Notebook software, to add a nifty feature or to do something fancy, you're looking at dealing with different syntax for markdown, `HTML`, `javascript`, `python` and possibly other DSLs, such as templates. Switching back and forth from one syntax to the other requires too much energy that would be better used on the actual priorities. What would be the use of intentionally writing or reading a book that randomly switches among several different languages with varying conventions of grammar, inflection and punctuation? I'm exhausted just thinking about it.
 
-It's like the WYSIWYG GUI designer, which might be great for a dedicated designer or for simple projects. However, just look at what it requires. Move your hand from the keyboard to the mouse. Point and click. Scan the screen for the icon. Point and click. Point, click and drag. Move your hand from the mouse back to the keyboard. Type, type, type. Move the hand back to the mouse. Scan. Point and click. Scan for the target menu. Point and click. Point and click. *Oops! Wrong menu.* Point and click. Scan. Scan. Scan. *Aargh! Where was that dang menu item again?* Point and click. *Ah! there it is.* Point and click. *Mystery meat icon. Mystery meat icon.* Point and hover. *Frick the frack? No, that wasn't it*... Back to the keyboard to write some code. Type, ty... Oh, that widget should probably be resized. Back to the mouse. Scan, point and click. Point, click and drag... Does it seem ludicrous yet? Now, you're a friggin' button pusher, and the buttons are poorly designed. It's not very efficient at all, when the alternative is to keep both hands on the keyboard, type in a line of code and have it appear on the screen near where you're looking already to see what you're typing. It sounds like a much better idea than the old way. If your rebuttal is that typing is too slow then you really need to take a typing course if you want to be a productive programmer.
+It's like the WYSIWYG GUI designer, which might be great for a dedicated designer or for simple projects. However, just look at what it requires. Move your hand from the keyboard to the mouse. Point and click. Scan the screen for the icon. Point and click. Point, click and drag. Move your hand from the mouse back to the keyboard. Type, type, type. Move the hand back to the mouse. Scan. Point and click. Scan for the target menu. Point and click. Point and click. *Oops! Wrong menu.* Point and click. Scan. Scan. Scan. *Aargh! Where was that dang menu item again?* Point and click. *Ah! there it is.* Point and click. *Mystery meat icon. Mystery meat icon.* Point and hover. *Frick the frack? No, that wasn't it*... Back to the keyboard to write some code. Type, ty... *Oh, that widget should probably be resized.* Back to the mouse. Scan, point and click. Point, click and drag... Does it seem ludicrous yet? Now, you're a friggin' button pusher, and the buttons are poorly designed. It's not very efficient at all, when the alternative is to keep both hands on the keyboard, type in a line of code and have it appear on the screen near where you're looking already to see what you're typing. It sounds like a much better idea than the old way. If your rebuttal is that typing is too slow then you really need to take a typing course if you want to be a productive programmer.
 
 Granted, different conventions for different purposes can be useful for the expression of specific ideas. However, even if you're an expert in every language that **might** be ideal for a particular project, switching back and forth between multiple representations is like a tax. If you have a reasonably sized team with individual specialists in each syntax who can and will provide a clean specification that effectively communicates the necessary requirements then each individual might be more productive in using a specialized language or tool, but it still will require more resources to glue it all together. It's that mythical man-month, complicated by all of the moving parts. If you're working solo or have a very small team, you can't afford the waste of time.
 
@@ -51,11 +51,11 @@ This fork materialized on November 17, 2020, so at the moment most of the code, 
 
 ### With [`quicklisp`](http://www.quicklisp.org/beta/)
 
+`claxiom` isn't in the `quicklisp` repository. As a workaround for using `ql:quickload` to load `claxiom` from a local copy, refer to section 4.1 of the [asdf manual](https://common-lisp.net/project/asdf/asdf.html). For my local system, I used the method of putting the line `(:directory "/home/username/path-to-claxiom-directory/")`in the file '/home/username/.config/common-lisp/source-registry.conf.d/50-username-lisp.conf', per section 4.1.
+
 - Install a Common Lisp (I suggest [`sbcl`](http://www.sbcl.org/platform-table.html))
 - Install [`quicklisp`](http://www.quicklisp.org/beta/)
-- Hop into a Lisp and do `(ql:quickload :cl-notebook)`, followed by `(cl-notebook:main)`
-
-**Note**: `cl-notebook` is no longer in the `quicklisp` repository. In December 2019 'quicklisp' warned it would be removed due to [bugs](https://github.com/inaimathi/cl-notebook/issues/71#issuecomment-561407799) that stemmed from changes to the API of `qlot`. As a workaround, to use `ql:quickload` with a local copy refer to section 4.1 of the [asdf manual](https://common-lisp.net/project/asdf/asdf.html). In a future update, the system name, package name and related filenames will be changed to claxiom.
+- Hop into a Lisp and do `(ql:quickload :claxiom)`, followed by `(claxiom:main)`
 
 ### Binary
 
@@ -63,7 +63,7 @@ Download [this](http://static.inaimathi.ca/cl-notebook-binaries/), run it (if yo
 
 _At the moment, we've only got binaries for 64-bit Linux. Submissions for other architectures welcome._
 
-### With [`roswell`](https://github.com/roswell/roswell) and [`qlot`](https://github.com/fukamachi/qlot)
+### With [`roswell`](https://github.com/roswell/roswell) and [`qlot`](https://github.com/fukamachi/qlot)-UNTESTED
 
 These help you manage Common Lisp distributions. They are usefull not only for running claxiom, but for any other CL project, so consider them regardless of whether you want this project.
 
@@ -71,11 +71,11 @@ These help you manage Common Lisp distributions. They are usefull not only for r
 - Install [`qlot`](https://github.com/fukamachi/qlot)
 - Clone [cl-notebook](https://github.com/Inaimathi/cl-notebook)
 
-In the `cl-notebook` directory you cloned to, do:
+In the `claxiom directory you cloned to, do:
 
 ```
 qlot install
-qlot exec roswell/cl-notebook.ros --port 4242
+qlot exec roswell/claxiom.ros --port 4242
 ```
 
 **Once `cl-notebook` is Running**
@@ -92,32 +92,32 @@ A quick-ish, and now slightly out-of-date video demo is available [here](https:/
 
 - Install [`roswell`](https://github.com/roswell/roswell)
 - Install [`qlot`](https://github.com/fukamachi/qlot)
-- Run `qlot exec ros build roswell/cl-notebook.ros` in the `cl-notebook` directory
+- Run `qlot exec ros build roswell/claxiom.ros` in the `claxiom` directory
 
    That will create a binary with the appropriate name that you can directly run on any machine of your OS and processor architecture.
-- Grab your binary at `roswell/cl-notebook`.
+- Grab your binary at `roswell/claxiom`.
 
 This should work under Linux, OSX and Windows.
 
 #### With [`buildapp`](https://www.xach.com/lisp/buildapp/)
 
-In order to build the `cl-notebook` binary, you need to
+In order to build the `claxiom` binary, you need to
 
 - Install a Common Lisp (I suggest, and have only tried this with, [`sbcl`](http://www.sbcl.org/platform-table.html))
 - Install [`quicklisp`](http://www.quicklisp.org/beta/)
 - Install and build [`buildapp`](https://www.xach.com/lisp/buildapp/)
-- Create an appropriate `build.manifest` file for loading `cl-notebook`
+- Create an appropriate `build.manifest` file for loading `claxiom`
 - Call `buildapp` with that `build.manifest` file, along with
-	- a bunch of `--load-system` calls that include everything `cl-notebook` needs
+	- a bunch of `--load-system` calls that include everything `claxiom` needs
     - an `--eval` call to `cl-notebook::read-statics` to include all the associated static files along with the binary
-    - an `--entry` of `cl-notebook:main`
-    - an `--output` of your choice of binary name (I suggest "`cl-notebook`")
+    - an `--entry` of `claxiom:main`
+    - an `--output` of your choice of binary name (I suggest "`claxiom`")
 
 That will create a binary with the appropriate name that you can directly run on any machine of your OS and processor architecture.
 
 ##### Linux
 
-If you're on a Debian-based linux distro, there is a `build.lisp` and `build.sh` included in the `build/` subdirectory of this repo that do most of the above for you. All you need to do is make sure to install `sbcl`, then call `sh build.sh` in the `build` directory. This will result in a `buildapp` binary and a `cl-notebook` binary being generated for you. The `cl-notebook` binary can then be run on any linux machine _(of the same CPU architecture)_ without worrying about installing a Lisp.
+If you're on a Debian-based linux distro, there is a `build.lisp` and `build.sh` included in the `build/` subdirectory of this repo that do most of the above for you. All you need to do is make sure to install `sbcl`, then call `sh build.sh` in the `build` directory. This will result in a `buildapp` binary and a `claxiom` binary being generated for you. The `claxiom` binary can then be run on any linux machine _(of the same CPU architecture)_ without worrying about installing a Lisp.
 
 ##### OS X
 

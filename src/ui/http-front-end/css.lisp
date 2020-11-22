@@ -1,4 +1,4 @@
-(in-package #:cl-notebook)
+(in-package #:claxiom)
 
 (defparameter +css-input+
   `(:border "2px solid #ccc" :border-right-color "#aaa" :border-bottom-color "#aaa" :border-radius 4px :height 24px :font-weight bold))

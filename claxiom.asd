@@ -1,6 +1,6 @@
-;;;; cl-notebook.asd
+;;;; claxiom.asd
 
-(asdf:defsystem #:cl-notebook
+(asdf:defsystem #:claxiom
   :serial t
   :description "A notebook-style in-browser editor for Common Lisp"
   :author "Inaimathi <leo.zovic@gmail.com>"

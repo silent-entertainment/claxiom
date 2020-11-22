@@ -1,4 +1,4 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 
 (define-handler (js/templates.js :content-type "application/javascript") ()
   (ps
@@ -112,7 +112,7 @@
 		      :onclick (+ "killCell(" (@ cell id) ")") "  ")
 	     (:select
 	      :onchange (+ "changeCellType(" (@ cell id) ", this.value)")
-	      (join (loop for tp in (@ *cl-notebook* formats eval (@ cell cell-language))
+	      (join (loop for tp in (@ *claxiom* formats eval (@ cell cell-language))
 		       if (= (@ cell cell-type) tp)
 		       collect (who-ps-html (:option :value tp :selected "selected" tp))
 		       else collect (who-ps-html (:option :value tp tp)))))

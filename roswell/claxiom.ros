@@ -5,19 +5,19 @@ exec ros -Q -- $0 "$@"
 |#
 (progn ;;init forms
   (ros:ensure-asdf)
-  (ql:quickload '(cl-notebook defmain) :silent t))
+  (ql:quickload '(claxiom defmain) :silent t))
 
-(defpackage :ros.script.cl-notebook
+(defpackage :ros.script.claxiom
   (:use :cl)
   (:import-from #:defmain
                 #:defmain))
-(in-package :ros.script.cl-notebook)
+(in-package :ros.script.claxiom)
 
 
 ;; Include all the associated static files along with the binary.
-(cl-notebook::read-statics)
+(claxiom::read-statics)
 
 
 (defmain main ((port "TCP port to bind the server"
                    :default 4242))
-  (cl-notebook:main nil :port port))
+  (claxiom:main nil :port port))

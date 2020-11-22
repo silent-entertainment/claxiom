@@ -1,4 +1,4 @@
-(in-package #:cl-notebook)
+(in-package #:claxiom)
 
 (defvar *front-end-eval-thread* nil)
 (defmethod front-end-eval (cell-language cell-type (contents string))

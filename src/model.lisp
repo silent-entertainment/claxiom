@@ -1,9 +1,9 @@
-(in-package :cl-notebook)
+(in-package :claxiom)
 
 ;;;;;;;;;; Notebook and constructor/destructor
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defclass notebook (fact-base)
-  ((namespace :accessor namespace :initform (find-package :cl-notebook) :initarg :namespace)))
+  ((namespace :accessor namespace :initform (find-package :claxiom) :initarg :namespace)))
 
 (defun make-notebook (&key (file-name (make-unique-name-in *books* "new-book")))
   (make-instance
@@ -51,7 +51,7 @@
   (namestring (file-name book)))
 
 (defmethod default-package ((book notebook))
-  (format nil "(defpackage ~s~%  (:use :cl :fact-base :cl-notebook))" (notebook-name book)))
+  (format nil "(defpackage ~s~%  (:use :cl :fact-base :claxiom))" (notebook-name book)))
 
 (defmethod notebook-name ((book notebook))
   (caddar (lookup book :b :notebook-name)))
