@@ -69,7 +69,7 @@ These help you manage Common Lisp distributions. They are usefull not only for r
 
 - Install [`roswell`](https://github.com/roswell/roswell)
 - Install [`qlot`](https://github.com/fukamachi/qlot)
-- Clone [`claxium`](https://github.com/silent-entertainment/claxiom
+- Clone [`claxium`](https://github.com/silent-entertainment/claxiom)
 
 In the `claxiom directory you cloned to, do:
 
