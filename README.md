@@ -78,7 +78,7 @@ qlot install
 qlot exec roswell/claxiom.ros --port 4242
 ```
 
-**Once `claxipo` is Running**
+**Once `claxiom` is Running**
 
 Hop into a browser and go to `localhost:4242/` (or whatever port you chose)
 
